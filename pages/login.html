@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CRM Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center">
+        <form id="loginForm" class="bg-white p-6 rounded shadow-md">
+            <h2 class="text-2xl mb-4">Login</h2>
+            <div class="mb-4">
+                <label for="username" class="block text-sm">Username</label>
+                <input type="text" id="username" name="username" class="w-full border px-2 py-1 rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-sm">Password</label>
+                <input type="password" id="password" name="password" class="w-full border px-2 py-1 rounded" required>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
+        </form>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/storage.js"></script>
+</body>
+</html>

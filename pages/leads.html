@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Leads - CRM Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="min-h-screen flex flex-col items-center justify-center">
+        <header class="bg-blue-600 text-white w-full p-4">
+            <h1 class="text-xl">Cadastro de Leads</h1>
+            <nav>
+                <a href="dashboard.html" class="text-white">Dashboard</a>
+                <a href="../index.html" class="text-white ml-4">Home</a>
+            </nav>
+        </header>
+        <main class="w-full max-w-4xl p-4">
+            <form id="leadForm" class="bg-white p-6 rounded shadow-md mb-6">
+                <h2 class="text-2xl mb-4">Adicionar Lead</h2>
+                <div class="mb-4">
+                    <label for="leadName" class="block text-sm">Nome do Lead</label>
+                    <input type="text" id="leadName" name="leadName" class="w-full border px-2 py-1 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="leadEmail" class="block text-sm">Email do Lead</label>
+                    <input type="email" id="leadEmail" name="leadEmail" class="w-full border px-2 py-1 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="leadPhone" class="block text-sm">Telefone do Lead</label>
+                    <input type="text" id="leadPhone" name="leadPhone" class="w-full border px-2 py-1 rounded" required>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Adicionar</button>
+            </form>
+            <section>
+                <h2 class="text-2xl mb-4">Leads</h2>
+                <div id="leadsList" class="bg-white p-6 rounded shadow-md">
+                    <!-- Lista de leads será renderizada aqui -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/storage.js"></script>
+    <script src="../js/leads.js"></script>
+</body>
+</html>

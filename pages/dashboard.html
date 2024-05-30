@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CRM Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-blue-600 text-white p-4">
+            <h1 class="text-xl">CRM Dashboard</h1>
+            <nav>
+                <a href="../index.html" class="text-white">Home</a>
+                <a href="companies.html" class="text-white ml-4">Empresas</a>
+                <a href="leads.html" class="text-white ml-4">Leads</a>
+                <a href="team.html" class="text-white ml-4">Equipe</a>
+                <a href="meetings.html" class="text-white ml-4">Reuniões</a>
+                <a href="expenses.html" class="text-white ml-4">Despesas</a>
+                <a href="contracts.html" class="text-white ml-4">Contratos</a>
+            </nav>
+        </header>
+        <main class="flex-1 p-4">
+            <h2 class="text-2xl mb-4">Painel de Controle</h2>
+            <section id="summary">
+                <h3 class="text-xl mb-2">Resumo</h3>
+                <div id="summaryCards" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Resumo de cartões -->
+                </div>
+            </section>
+            <section id="charts" class="mt-8">
+                <h3 class="text-xl mb-2">Gráficos</h3>
+                <canvas id="earningsChart"></canvas>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

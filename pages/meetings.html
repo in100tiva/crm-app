@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Reuniões - CRM Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="min-h-screen flex flex-col items-center justify-center">
+        <header class="bg-blue-600 text-white w-full p-4">
+            <h1 class="text-xl">Agenda de Reuniões</h1>
+            <nav>
+                <a href="dashboard.html" class="text-white">Dashboard</a>
+                <a href="../index.html" class="text-white ml-4">Home</a>
+            </nav>
+        </header>
+        <main class="w-full max-w-4xl p-4">
+            <form id="meetingForm" class="bg-white p-6 rounded shadow-md mb-6">
+                <h2 class="text-2xl mb-4">Agendar Reunião</h2>
+                <div class="mb-4">
+                    <label for="meetingTitle" class="block text-sm">Título da Reunião</label>
+                    <input type="text" id="meetingTitle" name="meetingTitle" class="w-full border px-2 py-1 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="meetingDate" class="block text-sm">Data da Reunião</label>
+                    <input type="datetime-local" id="meetingDate" name="meetingDate" class="w-full border px-2 py-1 rounded" required>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Agendar</button>
+            </form>
+            <section>
+                <h2 class="text-2xl mb-4">Reuniões Agendadas</h2>
+                <div id="meetingsList" class="bg-white p-6 rounded shadow-md">
+                    <!-- Lista de reuniões será renderizada aqui -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/storage.js"></script>
+    <script src="../js/meetings.js"></script>
+</body>
+</html>
